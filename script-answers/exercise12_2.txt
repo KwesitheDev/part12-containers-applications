@@ -1,0 +1,18 @@
+Script started on 2025-10-26 15:54:25+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="138" LINES="38"]
+[1m[7m%[27m[1m[0m                                                                                                                                          ]2;kwesithedev@kwesithedev-HP-240-G7-Notebook-PC:~/repos/part12-containers-applications/script-answers]1;..cript-answers]7;file://kwesithedev-HP-240-G7-Notebook-PC/home/kwesithedev/repos/part12-containers-applications/script-answers\[0m[27m[24m[J[01;32m➜  [36mscript-answers[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mscript-answers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [Kddocker start -i t exercise12_2.txt[1m [0m[0m [?1l>[?2004l
+]2;docker start -it exercise12_2.txt]1;dockerunknown shorthand flag: 't' in -t
+
+Usage:  docker start [OPTIONS] CONTAINER [CONTAINER...]
+
+Run 'docker start --help' for more information
+[1m[7m%[27m[1m[0m                                                                                                                                          ]2;kwesithedev@kwesithedev-HP-240-G7-Notebook-PC:~/repos/part12-containers-applications/script-answers]1;..cript-answers]7;file://kwesithedev-HP-240-G7-Notebook-PC/home/kwesithedev/repos/part12-containers-applications/script-answers\[0m[27m[24m[J[01;31m➜  [36mscript-answers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hdocker start -it exercise12_2.txt[11D[P[18C [19D[P[17C [18Di exercise12_2.txt[17D[?1l>[?2004l
+]2;docker start -i exercise12_2.txt]1;dockerError response from daemon: No such container: exercise12_2.txt
+[1m[7m%[27m[1m[0m                                                                                                                                          ]2;kwesithedev@kwesithedev-HP-240-G7-Notebook-PC:~/repos/part12-containers-applications/script-answers]1;..cript-answers]7;file://kwesithedev-HP-240-G7-Notebook-PC/home/kwesithedev/repos/part12-containers-applications/script-answers\[0m[27m[24m[J[01;31m➜  [36mscript-answers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hdocker start -i exercise12_2.txt     [11D           [11Dzealous_pasteur[1m [0m[0m [?1l>[?2004l
+]2;docker start -i zealous_pasteur]1;docker[?2004h]0;root@39aab0f5f660: /root@39aab0f5f660:/# clear
+[?2004l[H[2J[3J[?2004h]0;root@39aab0f5f660: /root@39aab0f5f660:/# mkdir -p /usr/src/s app
+[?2004l[?2004h]0;root@39aab0f5f660: /root@39aab0f5f660:/# touch /ur sr/src/app/inf dex.js
+[?2004l[?2004h]0;root@39aab0f5f660: /root@39aab0f5f660:/# [Kexit 
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                                                                          ]2;kwesithedev@kwesithedev-HP-240-G7-Notebook-PC:~/repos/part12-containers-applications/script-answers]1;..cript-answers]7;file://kwesithedev-HP-240-G7-Notebook-PC/home/kwesithedev/repos/part12-containers-applications/script-answers\[0m[27m[24m[J[01;32m➜  [36mscript-answers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2025-10-26 15:55:47+00:00 [COMMAND_EXIT_CODE="0"]
