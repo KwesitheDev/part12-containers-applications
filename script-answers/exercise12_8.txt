@@ -1,0 +1,56 @@
+Script started on 2025-10-29 01:36:37+00:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="132" LINES="15"]
+[1m[7m%[27m[1m[0m                                                                                                                                    ]2;kwesithedev@kwesithedev-HP-240-G7-Notebook-PC:~/repos/part12-containers-applications/script-answers]1;..cript-answers]7;file://kwesithedev-HP-240-G7-Notebook-PC/home/kwesithedev/repos/part12-containers-applications/script-answers\[0m[27m[24m[J[01;32m➜  [36mscript-answers[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mscript-answers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [Kddocker ps[?1l>[?2004l
+]2;docker ps]1;dockerCONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                                           NAMES
+c55adefc055d   mongo:4.4   "docker-entrypoint.s…"   4 minutes ago   Up 4 minutes   0.0.0.0:3456->27017/tcp, [::]:3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                                                                    ]2;kwesithedev@kwesithedev-HP-240-G7-Notebook-PC:~/repos/part12-containers-applications/script-answers]1;..cript-answers]7;file://kwesithedev-HP-240-G7-Notebook-PC/home/kwesithedev/repos/part12-containers-applications/script-answers\[0m[27m[24m[J[01;32m➜  [36mscript-answers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hddocker e
+[0mevents  -- Get real time events from the server
+exec    -- Execute a command in a running container
+[Jexport  -- Export a container's filesystem as a tar archive[J[3A[0m[27m[24m[31Cdocker e[Kx
+[J[0mexec    -- Execute a command in a running container
+[Jexport  -- Export a container's filesystem as a tar archive[J[A[A[0m[27m[24m[31Cdocker ex[Kec[1m [0m[0m -it todo-backend-mongo-1[1m [0m[0m bas
+[J[A[71Ch[?1l>[?2004l
+[J]2;docker exec -it todo-backend-mongo-1 bash]1;dockerroot@c55adefc055d:/# mongosh -u root -p example
+bash: mongosh: command not found
+root@c55adefc055d:/# mongosh -u root -p examplemongosh[1P[1P
+MongoDB shell version v4.4.29
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("89103c7f-374e-4ebb-bf09-b8f17e66e9a4") }
+MongoDB server version: 4.4.29
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+	https://community.mongodb.com
+---
+The server generated these startup warnings when booting: 
+        2025-10-29T01:32:10.556+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_data[3G[Juse the_dat[14G[3G[Juse the_da[13G[3G[Juse the_d[12G[3G[Juse the_[11G[3G[Juse the[10G_databaseds[3G[Juse the_databaseds[3G[3G[Jse the_databaseds[3G[3G[Jse the_databaseds[3G[3G[JHse the_databaseds[4G[3G[JHse the_databaseds[4G[3G[JHHse the_databaseds[5G[3G[JHse the_databaseds[4G[3G[JHe the_databaseds[4G[3G[JH the_databaseds[4G[3G[JHthe_databaseds[4G[3G[JHhe_databaseds[4G[3G[JHe_databaseds[4G[3G[JH_databaseds[4G[3G[JHdatabaseds[4G[3G[JHatabaseds[4G[3G[JHtabaseds[4G[3G[JHabaseds[4G[3G[JHbaseds[4G[3G[JHaseds[4G[3G[JHseds[4G[3G[JHeds[4G[3G[JHds[4G[3G[JHs[4G[3G[JH[4G[3G[J[3Guse the_datas[3G[Juse the_data[15Gbase [3G[Juse the_database[19G[3G[Juse the_database[19G
+switched to db the_database
+> show cole[3G[Jshow col[11Glections[3G[Jshow collections[19G
+todos
+> db tot[3G[Jdb to[8Gdos.find({})[3G[Jdb todos.find({})[12G[3G[Jdb todos.find({})[6G[3G[Jdbtodos.find({})[5G[3G[Jdb.todos.find({})[6G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("69016e99740df45f6c4c95e6"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("69016e99740df45f6c4c95e7"), "text" : "Learn about containers", "done" : false }
+> db.todos.insertOne({  text: "Increase the number of tools in my tool belt",  done: false})[3G[Jdb.todos.insertOne({  text: "Increase the number of tools in my tool belt",  done: false})[93G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("6901714477dccfdbccbc525e")
+}
+> [3G[Jdb.todos.insertOne({  text: "Increase the number of tools in my tool belt",  done: false})[93G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("69016e99740df45f6c4c95e6"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("69016e99740df45f6c4c95e7"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("6901714477dccfdbccbc525e"), "text" : "Increase the number of tools in my tool belt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+root@c55adefc055d:/# exit
+exit
+[1m[7m%[27m[1m[0m                                                                                                                                    ]2;kwesithedev@kwesithedev-HP-240-G7-Notebook-PC:~/repos/part12-containers-applications/script-answers]1;..cript-answers]7;file://kwesithedev-HP-240-G7-Notebook-PC/home/kwesithedev/repos/part12-containers-applications/script-answers\[0m[27m[24m[J[01;32m➜  [36mscript-answers[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2025-10-29 02:02:16+00:00 [COMMAND_EXIT_CODE="0"]
