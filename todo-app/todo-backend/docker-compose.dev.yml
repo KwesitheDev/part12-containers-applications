@@ -4,7 +4,7 @@ services:
     ports:
       - 3000:3000
     environment:
-      - MONGO_URL=mongodb://root:example@mongo:27017/the_database
+      - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database?authSource=the_database
     depends_on:
       - mongo
     volumes:
