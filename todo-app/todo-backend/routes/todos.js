@@ -34,13 +34,37 @@ singleRouter.delete('/', async (req, res) => {
 });
 
 /* GET todo. */
-singleRouter.get('/', async (req, res) => {
-  res.sendStatus(405); // Implement this
+singleRouter.get('/:id', async (req, res) => {
+  try{
+    const todo = await Todo.findById(req.params.id)
+    if (todo) {
+      res.send(todo)
+    } else {
+      res.sendStatus(404).json({ error: 'Todo not found' })
+    }
+  }catch(err){
+    res.sendStatus(400).json({ error: 'Malformatted id' })
+  }
 });
 
 /* PUT todo. */
-singleRouter.put('/', async (req, res) => {
-  res.sendStatus(405); // Implement this
+singleRouter.put('/:id', async (req, res) => {
+  const {text, done} = req.body
+  try{
+    const updatedTodo = await Todo.findByIdAndUpdate(
+      req.params.id,
+      { text, done },
+      { new: true, runValidators: true }
+    )
+    if (!updatedTodo) {
+      return res.status(404).json({ error: 'Todo not found' })
+    }
+
+    res.json(updatedTodo)
+  }catch(err){
+    console.log(err)
+    res.status(400).json({ error: 'Malformatted id or Invalid data' })
+  }
 });
 
 router.use('/:id', findByIdMiddleware, singleRouter)
