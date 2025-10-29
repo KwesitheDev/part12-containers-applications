@@ -5,11 +5,12 @@ services:
       - 3000:3000
     environment:
       - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database?authSource=the_database
+      - REDIS_URL=redis://redis:6379
     depends_on:
       - mongo
     volumes:
       - .:/usr/src/app
-    command: npm start  # or whatever starts your backend
+    command: npm start  
 
   mongo:
     image: mongo:4.4
@@ -23,5 +24,13 @@ services:
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
       - mongo_data:/data/db
 
+  redis: 
+    image: redis:7
+    ports:
+      - 6379:6379
+    volumes:
+        - redis_data:/data
+
 volumes:
   mongo_data:
+  redis_data:
